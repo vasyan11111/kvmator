@@ -1,0 +1,9 @@
+extends layout
+block content
+    div.kvmid
+        table
+            -each field in kvm
+                tr
+                    td.mac= field.mac
+                    td._id= field._id
+                    td.created= field.created

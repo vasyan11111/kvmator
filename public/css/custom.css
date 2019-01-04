@@ -1,0 +1,27 @@
+table {
+    text-align: center;
+    font: 1.2em Tahoma;
+    cursor: default;
+}
+.logo {
+    margin: 30px 30px;
+    cursor: pointer;
+}
+.kvmid{
+    text-align:left;
+}
+.center-block{
+    display: block;
+    margin: 40px auto 40px auto;
+}
+.tablehead {
+    font-weight: bold ;
+}
+.bold {
+    font-weight: bold;
+}
+.settings {
+    cursor: pointer;
+    font-size: 1.2em;
+    margin: 30px -20px;
+}

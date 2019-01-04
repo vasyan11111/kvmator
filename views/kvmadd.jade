@@ -1,0 +1,13 @@
+extends layout
+block content
+    form.form-horizontal(method="post")
+        .form-group
+            label.col-sm-2.control-label(for='KVMID') KVMID
+            .col-sm-10
+                input#KVMID.form-control(type='text', placeholder='KVMID', name="kvmid")
+            label.col-sm-2.control-label(for='kvmmac') Mac
+            .col-sm-10
+                    input#kvmmac.form-control(type='text', placeholder='AA:BB:CC:DD:EE:FF', name="kvmmac")
+        .form-group
+            .col-sm-offset-2.col-sm-10
+                input.btn.btn-primary(type='submit', value="Save")

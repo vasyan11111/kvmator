@@ -1,0 +1,30 @@
+extends layout
+
+block content
+        table.table.table-bordered.table-hover
+            thead
+                td.kvmid.bold KVM
+                td.bold St
+                td.bold Free
+                td.bold Uptime
+            tbody
+            -each kvm in macKvmTest
+                tr
+                    td.kvmid.bold=kvm.kvmid
+                    - if (kvm.room=='vip'){
+                        td VIP
+                    -}
+                    - if (kvm.room=='standart1' || kvm.room=='standart2'){
+                        td=kvm.st
+                    -}
+                    - if (!kvm.room){
+                        td.unknown Unknown
+                    -}
+                    if kvm.activity>=0
+                        td.activity=kvm.activity
+                    else
+                        td.unknown Unknown
+                    if kvm.systime
+                        td.uptime=(kvm.systime-kvm.lastChange)
+                    else
+                        td.unknown Unknown

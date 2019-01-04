@@ -1,0 +1,20 @@
+extends layout
+block content
+    row
+        table.table.table-hover
+            -each kvm in kvms
+                tr
+                     td._id= kvm._id
+                     td.mac= kvm.mac
+                     td.created= kvm.created
+                     td
+                         form(method='post', action='/kvm/del')
+                             input(type='hidden', value=kvm._id, name='_id')
+                             input.btn.btn-danger(type='submit', value='delete')
+            tr
+                td
+                td
+                td
+                td
+                    form(action='/kvm/add')
+                        button.btn.btn-success Add

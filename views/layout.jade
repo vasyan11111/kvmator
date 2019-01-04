@@ -1,0 +1,21 @@
+doctype 5
+html
+  head
+    title KVMATOR2
+    link(rel='stylesheet', href='/css/bootstrap.css')
+    link(rel='stylesheet', href='/css/custom.css')
+    script(src='/js/bootstrap.js')
+    link(rel="shortcut icon", href="/img/bird.ico")
+    body
+      .row
+          .col-lg-4.col-lg-offset-3
+            a(href='/')
+              img.logo(src="/img/logo.JPG")
+          .col-lg-2.col-lg-offset-1
+              a.settings(href='/kvm')
+                  img.logo(src="/img/1383590301_params.png")
+      .row
+          .col-lg-6.col-lg-offset-3
+                    block content
+                    script(src="http://code.jquery.com/jquery-1.10.1.min.js")
+                    script(src="/js/index.js")
